@@ -1,6 +1,6 @@
 {
   "name": "knexentity",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A entity builder base on database and model definition",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
