@@ -1,9 +1,10 @@
 {
   "name": "knexentity",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A entity builder base on database and model definition",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc",
+    "install": "tsc"
   },
   "repository": {
     "type": "git",
