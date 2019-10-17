@@ -14,7 +14,7 @@ import { <yourSchema>Context } from './models/<yourSchema>Context';
 import { usersEntity } from './models/users';
 import { topicsEntity } from './models/topics';
 
-async function getAllTopicByUser(currentUser: userEntity) : topicEntity {
+async function getAllTopicByUser(currentUser: userEntity) : topicEntity[] {
   return DbForum.topics.fromDb((query, table) => {
     query.where(table.Column.userId, currentUser.id);
   });
