@@ -10,12 +10,15 @@ Knex Entity
 ```
 
 ```ts
-import { <yourSchema>Context } from './models/<yourSchema>Context';
+import knex from 'knex';
+import { forumContext } from './models/forumContext';
 import { usersEntity } from './models/users';
 import { topicsEntity } from './models/topics';
 
+const dbForum = new forumContext(knex({ ... your knex config ... }));
+
 async function getAllTopicByUser(currentUser: userEntity) : topicEntity[] {
-  return DbForum.topics.fromDb((query, table) => {
+  return dbForum.topics.fromDb((query, table) => {
     query.where(table.Column.userId, currentUser.id);
   });
 }

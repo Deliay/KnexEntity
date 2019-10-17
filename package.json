@@ -1,6 +1,6 @@
 {
   "name": "knexentity",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A entity builder base on database and model definition",
   "scripts": {
     "compile": "tsc",
