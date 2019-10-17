@@ -1,9 +1,9 @@
 {
   "name": "knexentity",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A entity builder base on database and model definition",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/Deliay/KnexEntity#readme",
   "dependencies": {
+    "@types/node": "12.11.1",
     "knex": "0.19.5",
     "ts-node": "8.4.1",
     "tslib": "1.10.0",
