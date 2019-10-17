@@ -2,19 +2,22 @@ Knex Entity
 ----
 [Typescript only]Simple schema Context/Entity builder
 
-```ts
-async function getAllTopicByUser(user: User) : Topic {
-  return DbForum.Topic.fromDb((query, table) => {
-    query
-    .where(table.Column.userId, user.id);
-  });
-}
-```
-
 ## How to use ?
 ```
-> npm install KnexEntity
+> npm install knexentity
 > mkdir models
-> npx knextable toModel --useMoment --toFolder ./models <your_schema>
+> npx knextable toModel <your_schema> --useMoment --genContext --toFolder ./models
+```
+
+```ts
+import { <yourSchema>Context } from './models/<yourSchema>Context';
+import { usersEntity } from './models/users';
+import { topicsEntity } from './models/topics';
+
+async function getAllTopicByUser(currentUser: userEntity) : topicEntity {
+  return DbForum.topics.fromDb((query, table) => {
+    query.where(table.Column.userId, currentUser.id);
+  });
+}
 ```
 
